@@ -7,7 +7,11 @@ const users = require("../models/userSchema.js");
 // });
 
 // register user
-
+router.get("/", (req,res)=>{
+    res.send({
+        message: "Hello from the Backend"
+    })
+})
 router.post("/register",async(req,res)=>{
     //console.log(req.body);
     const {name,email,age,mobile,work,add,desc} = req.body;
